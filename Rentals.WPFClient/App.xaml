@@ -1,0 +1,8 @@
+﻿<Application x:Class="Rentals.WPFClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Rentals.WPFClient">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Rentals.WPFClient.Modules.Views.Footer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:local="clr-namespace:Rentals.WPFClient.Modules.Views"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300">
+    <StackPanel Height="24">
+        <TextBlock Text="{Binding FooterText}" />
+    </StackPanel>
+</UserControl>

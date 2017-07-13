@@ -1,0 +1,16 @@
+﻿<Window x:Class="Rentals.WPFClient.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        MinHeight="718" Height="718" MinWidth="525" Width="525"
+        Title="{Binding Title}">
+    <DockPanel LastChildFill="True">
+        <ContentControl DockPanel.Dock="Top" prism:RegionManager.RegionName="TopMenu" Height="25" Background="LightGray"/>
+        
+        <ContentControl DockPanel.Dock="Bottom" prism:RegionManager.RegionName="Footer" Height="25" Background="LightGray"/>
+
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+
+    </DockPanel>
+</Window>
