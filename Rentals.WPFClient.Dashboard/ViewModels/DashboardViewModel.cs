@@ -31,8 +31,9 @@ namespace Rentals.WPFClient.Dashboard.ViewModels
 
     public class DashboardViewModel : BindableBase
     {
-        public DashboardViewModel()
+        public DashboardViewModel(IDashboardService dashboardService)
         {
+            HelloText = new NotifyTaskCompletion<string>(dashboardService.GetText());
             Url = "http://www.example.com/";
             CountUrlBytesCommand = AsyncCommand.Create(token => MyService.DownloadAndCountBytesAsync(Url, token));
 
@@ -44,6 +45,8 @@ namespace Rentals.WPFClient.Dashboard.ViewModels
             //    Operations.Add(new CountUrlBytesViewModel(this, Url, countBytes));
             //});
         }
+
+        public NotifyTaskCompletion<string> HelloText { get; private set; }
 
         private string _url;
         public string Url

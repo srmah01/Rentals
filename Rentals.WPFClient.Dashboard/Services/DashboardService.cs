@@ -16,6 +16,8 @@ namespace Rentals.WPFClient.Dashboard.Services
             var client = RentalsHttpClient.GetClient();
             string responseString = String.Empty;
 
+            await Task.Delay(TimeSpan.FromSeconds(3)).ConfigureAwait(false);
+
             HttpResponseMessage response = await client.GetAsync("api/hello");
 
             if (response.IsSuccessStatusCode)
