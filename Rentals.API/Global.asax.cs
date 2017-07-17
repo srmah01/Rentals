@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rentals.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,9 @@ namespace RentalsAPI
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            // Uncomment to drop the database and re-initialises with default seed data
+            //DataHelper.NewDb(true);
         }
     }
 }
